@@ -5,7 +5,15 @@ mergeInto(LibraryManager.library, {
   },
 
   HogeHoge: function() {
-    hogehoge();
+    window.unityMethods.sampleHoge();
+  },
+
+  DisplayModal: function() {
+  	window.unityMethods.displayModal();
+  },
+
+  HiddenModal: function() {
+  	window.unityMethods.hiddenModal();
   }
 
 });

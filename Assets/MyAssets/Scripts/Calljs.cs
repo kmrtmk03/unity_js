@@ -11,6 +11,12 @@ public class Calljs : MonoBehaviour
     [DllImport("__Internal")]
     private static extern void HogeHoge();
 
+    [DllImport("__Internal")]
+    private static extern void DisplayModal();
+
+    [DllImport("__Internal")]
+    private static extern void HiddenModal();
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
@@ -23,5 +29,15 @@ public class Calljs : MonoBehaviour
     public void FromJs()
     {
         Debug.Log("From JS");
+    }
+
+    public static void JsDisplayModal()
+    {
+        DisplayModal();
+    }
+
+    public static void JsHiddenModal()
+    {
+        HiddenModal();
     }
 }
