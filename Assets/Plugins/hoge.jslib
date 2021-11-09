@@ -14,6 +14,10 @@ mergeInto(LibraryManager.library, {
 
   HiddenModal: function() {
   	window.unityMethods.hiddenModal();
+  },
+
+  DisplayModalInt: function(_index) {
+    window.unityMethods.displayModalInt(_index)
   }
 
 });
