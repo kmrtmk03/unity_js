@@ -8,7 +8,15 @@ public class MyCharacter : MonoBehaviour
     private GameObject character = default;
 
     [SerializeField]
+    private int defaultColor = 0;
+
+    [SerializeField]
     private Material[] materials = default;
+
+    private void Start()
+    {
+        ChangeMaterial(defaultColor);
+    }
 
     public void ChangeMaterial(int _index)
     {
