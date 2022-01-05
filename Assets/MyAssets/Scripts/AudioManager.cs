@@ -10,6 +10,11 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         audioSource = gameObject.GetComponent<AudioSource>();
+
+        //開発用
+#if UNITY_EDITOR
+        audioSource.Play();
+#endif
     }
 
     /// <summary>
