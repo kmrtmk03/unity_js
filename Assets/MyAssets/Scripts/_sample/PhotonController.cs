@@ -56,5 +56,9 @@ public class PhotonController : MonoBehaviourPunCallbacks
         myController.enabled = true;
 
         myCharacter.CameraOn();
+
+#if !UNITY_EDITOR
+        Calljs.JsCompleteLoad();
+#endif
     }
 }

@@ -18,6 +18,10 @@ mergeInto(LibraryManager.library, {
 
   DisplayModalInt: function(_index) {
     window.unityMethods.displayModalInt(_index)
+  },
+
+  CompleteLoad: function() {
+    window.unityMethodsUnity.completeLoad();
   }
 
 });

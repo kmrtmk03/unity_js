@@ -20,14 +20,8 @@ public class Calljs : MonoBehaviour
     [DllImport("__Internal")]
     private static extern void DisplayModalInt(int _index);
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-            Fuga();
-
-        if (Input.GetKeyDown(KeyCode.H))
-            HogeHoge();
-    }
+    [DllImport("__Internal")]
+    private static extern void CompleteLoad();
 
     public void FromJs()
     {
@@ -47,5 +41,10 @@ public class Calljs : MonoBehaviour
     public static void JsDisplayModalInt(int _index)
     {
         DisplayModalInt(_index);
+    }
+
+    public static void JsCompleteLoad()
+    {
+        CompleteLoad();
     }
 }
