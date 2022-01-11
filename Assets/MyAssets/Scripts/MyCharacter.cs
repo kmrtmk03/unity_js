@@ -18,7 +18,7 @@ public class MyCharacter : MonoBehaviour
 
     private void Start()
     {
-        ChangeMaterial(defaultColor);
+        //ChangeMaterial(defaultColor);
     }
 
     public void ChangeMaterial(int _index)

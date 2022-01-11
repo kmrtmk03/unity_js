@@ -40,6 +40,8 @@ public class PhotonController : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Debug.Log("Joined Room");
+
+        // キャラクターの生成
         GameObject myPlayer = PhotonNetwork.Instantiate(
             PhotonObject.name,
             new Vector3(1.89f, 0f, -8.29f),
@@ -51,10 +53,16 @@ public class PhotonController : MonoBehaviourPunCallbacks
         MyCharacter myCharacter = myPlayer.GetComponent<MyCharacter>();
         myCharacter.enabled = true;
 
+        // マテリアルの初期化
+        CharacterManager.instance.myCharacter = myCharacter;
+        CharacterManager.instance.MaterialIndex = 0;
+        CharacterManager.instance.ChangeMaterial();
+
         // MyControllerクラスの管理
         MyController myController = myPlayer.GetComponent<MyController>();
         myController.enabled = true;
 
+        // Cameraの設定
         myCharacter.CameraOn();
 
 #if !UNITY_EDITOR
